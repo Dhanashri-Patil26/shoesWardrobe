@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>ShoesWardrobe | Login</title>
+    <style></style>
+</head>
+<body id="body_login">
+    <script>
+        function login(){
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            
+            if(user=='khushi' && pass=='123'){
+                window.location.assign("index.html");
+            }
+            else{
+                alert("Invalid Username or Password");
+            }
+        }
+    </script>
+   <div class="box">
+    <div class="container_login">
+
+        <div class="top">
+            <header>Login</header>
+        </div>
+
+        <div class="input-field_login">
+            <input type="text" class="input_login" placeholder="Username" id="username">
+            <i class='bx bx-user' ></i>
+        </div>
+
+        <div class="input-field_login">
+            <input type="Password" class="input_login" placeholder="Password" id="password">
+            <i class='bx bx-lock-alt'></i>
+        </div>
+
+        <div class="input-field">
+            <input type="submit" class="submit" value="Login" id="" onclick="login()">
+        </div>
+
+        <div class="two-col">
+            <div class="one">
+               <input type="checkbox" name="" id="check">
+               <label for="check"> Remember Me</label>
+            </div>
+            <div class="two">
+                <label><a href="#">Forgot password?</a></label>
+            </div>
+        </div>
+    </div>
+</div>  
+</body>
+</html>

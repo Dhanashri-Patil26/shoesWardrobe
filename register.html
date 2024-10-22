@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+    <link rel="stylesheet" href="style_1.css">
+</head>
+<body>
+    <div class="container_1">
+        <div class="image_1">
+            <div class="form-box_1">
+                <div class="form_1">
+                <h2>Register</h2>
+                <div class="input-box_1">
+                    <input type="username" id="username" required>
+                    <label for="">Username</label>
+                </div>
+                
+                <div class="input-box_1">
+                    <input type="password" id="password" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="input-box_1">
+                    <input type="password" id="password"required>
+                    <label for="">Confirm Password</label>
+                </div>
+                <div class="group_1">
+                    <a href="#">Forgot Password</a>
+                    <a href="login.html">Login</a>
+                </div>
+                    <button type="button" onclick="registerUser()">Submit</button>
+                </form>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function registerUser() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+    
+        if (username && password) {
+            const user = { username, password };
+            localStorage.setItem(username, JSON.stringify(user));
+            alert("Registration successful!");
+        } else {
+            alert("Please fill in both fields.");
+        }
+    }
+    </script>
+</html>
